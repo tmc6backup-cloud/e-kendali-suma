@@ -1,14 +1,14 @@
 
-<!-- Duplikat index.html untuk menangani refresh pada client-side routing GitHub Pages -->
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <script>
-        // Redirect ke index.html dan simpan path asli jika perlu
-        // Namun karena kita menggunakan HashRouter di App.tsx, 404 jarang terjadi.
-        // File ini berfungsi sebagai asuransi.
-        window.location.href = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/index.html' + window.location.hash;
+    <meta charset="utf-8">
+    <title>E-Kartu Kendali - Mengalihkan...</title>
+    <script type="text/javascript">
+        // Jika user me-refresh halaman di rute tertentu, 
+        // arahkan kembali ke index.html dan biarkan HashRouter menangani sisanya.
+        var location = window.location;
+        location.replace(location.origin + location.pathname.split('/').slice(0, -1).join('/') + '/index.html');
     </script>
 </head>
 <body>
