@@ -1,0 +1,17 @@
+
+<!-- Duplikat index.html untuk menangani refresh pada client-side routing GitHub Pages -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // Redirect ke index.html dan simpan path asli jika perlu
+        // Namun karena kita menggunakan HashRouter di App.tsx, 404 jarang terjadi.
+        // File ini berfungsi sebagai asuransi.
+        window.location.href = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/index.html' + window.location.hash;
+    </script>
+</head>
+<body>
+    Mengarahkan kembali ke aplikasi...
+</body>
+</html>
